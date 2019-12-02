@@ -7,10 +7,10 @@
 // Brute force method uses 3 for loops, which gives O(n^2) time complexity which is not enough for interviews
 
 //Pseudocode for O(n) time complexity Sliding Window approach
-// 1. Create an empty hashMap (key/val -> character/index)
-// 2. Create start and max variable, set both with initial values of zero
+// 1. Create an empty hashMap called windowCharMap (key/val -> character/index)
+// 2. Create windowStart and maxLength variables, set both with initial values of zero
 // 3. Loop through input string
-//    If current character in hashMap & has index >= start
+//    If current character (endChar) in hashMap has index >= start
 //        Set start to index for character found in hashMap + 1
 //    Set key/value pair on hashMap to be current character/current Index
 //    If length of current window is greater than max
