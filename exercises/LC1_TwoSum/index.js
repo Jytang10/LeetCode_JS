@@ -7,7 +7,18 @@
 // twoSum([3,2,4], 9) --> [1,2]
 
 function twoSum(arr, target) {
+  const arr = [];
+  const obj = {};
 
+  for(let i = 0; i < arr.length; i++){
+    const num = arr[i];
+    const complement = target - num;
+    if(obj[complement] !== undefined){
+      arr.push(i, obj[complement]);
+      return arr;
+    }
+    obj[num] = i;
+  }
 }
 
 module.exports = twoSum;
